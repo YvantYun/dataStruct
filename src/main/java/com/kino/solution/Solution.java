@@ -6,6 +6,8 @@ package com.kino.solution;
  */
 public class Solution {
     public ListNode removeElements(ListNode head,int val){
+
+        //删除多个 所以需要循环
         while ( head != null && head.val ==val ){
             ListNode delNode = head;
             head = head.next;
@@ -24,9 +26,13 @@ public class Solution {
                 prev.next = delNode.next;
                 delNode.next = null;
 
+            }else {
+                prev = prev.next;
             }
 
-            
+
         }
+
+        return head;
     }
 }

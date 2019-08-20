@@ -1,5 +1,8 @@
 package com.kino.datastruct.stack;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author: kino
  * @Date: 2019/1/27 0:24
@@ -35,6 +38,28 @@ public class Solution {
                 }
             }
         }
+
         return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        String str = "AAABBBCCCDDDDD";
+        Map<Character,Integer> map = new HashMap<Character, Integer>();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if(map.get(ch) != null){
+                map.put(ch,map.get(ch) + 1);
+            }else{
+                map.put(ch,1);
+            }
+
+        }
+        for(Map.Entry entry: map.entrySet()){
+            System.out.print(entry.getKey()+""+entry.getValue());
+        }
+
+
+
+
     }
 }

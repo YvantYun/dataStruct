@@ -38,15 +38,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int opCount = 100000;
 
-        ArrayStack<Integer> arrayStack = new ArrayStack<>();
-        double time1 = testStack(arrayStack,opCount);
-        System.out.println(time1);
-
-
-        LinkedListStack<Integer> listStack = new LinkedListStack<>();
-        double time2 = testStack(listStack, opCount);
-        System.out.println(time2);
     }
 }
